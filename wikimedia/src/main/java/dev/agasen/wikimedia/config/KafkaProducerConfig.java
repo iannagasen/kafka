@@ -1,7 +1,6 @@
 package dev.agasen.wikimedia.config;
 
 import java.util.Map;
-import java.util.Properties;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.ProducerConfig;

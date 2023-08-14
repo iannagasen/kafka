@@ -35,10 +35,10 @@ public class KafkaBasicsApplication {
 		 * ./mvnw spring-boot:run -DskipTests=true -Dspring-boot.run.arguments="CONSUMER"
 		 * ./mvnw spring-boot:run -DskipTests=true -Dspring-boot.run.arguments="PRODUCER"
 		 */
-		for(String arg : args) {
+		for (String arg : args) {
 			log.info("HELLO");
 			log.info(arg);
-			if ("CONSUMER" .equals(arg)) {
+			if ("CONSUMER".equals(arg)) {
 				kafkaConsumerWithGracefulShutdown().run();
 			} else if ("CONSUMER2".equals(arg)) {
 				consumerInConsumerGroups().run();

@@ -15,6 +15,8 @@ import reactor.core.publisher.Flux;
 @Component
 public class KafkaRunner implements CommandLineRunner {
 
+  private static final String TOPIC = "wikimedia.recentchanges";
+
   private final KafkaTemplate<String, String> kafkaTemplate;
   private final WikimediaStreamClient wikimediaStreamClient;
 
@@ -28,6 +30,7 @@ public class KafkaRunner implements CommandLineRunner {
 
   public void consumeSuccess(String s) {
     log.info("consuming... " + s);
+    kafkaTemplate.send(TOPIC, s);
   }
 
   public void consumeError(Throwable t) {

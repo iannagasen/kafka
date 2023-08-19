@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-KafkaProducerApplication<kafka-producer>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "dev.agasen.kafkaproducer.KafkaProducerApplication",
+      "projectName": "kafka-producer",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
